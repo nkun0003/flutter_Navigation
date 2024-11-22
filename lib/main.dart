@@ -6,7 +6,7 @@ import 'data_page.dart';
 import 'contact_page.dart';
 
 void main() {
-  runApp(const MyApp()); // Entry point of the application
+  runApp(const MyApp()); // entry point of the application
 }
 
 class MyApp extends StatelessWidget {
@@ -18,9 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Navigation App', // App title
       theme: ThemeData(
-        useMaterial3: true, // Enables Material 3 design
+        useMaterial3: true, // enabling Material 3 design
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.teal, // Defines primary color
+          seedColor: Colors
+              .teal, // defining primary color, i used seed instead of Swatch due to its dynamic nature of the color scheme
         ),
         textTheme: const TextTheme(
           bodyMedium: TextStyle(fontSize: 16, color: Colors.white),

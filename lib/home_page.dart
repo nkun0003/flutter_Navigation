@@ -25,6 +25,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+
           // Bottom half with text
           Expanded(
             flex: 1,
