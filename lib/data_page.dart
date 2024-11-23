@@ -62,6 +62,7 @@ class _DataPageState extends State<DataPage> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('App Two'),
+          centerTitle: true,
         ),
         body: Container(
           color: Colors.lightBlue,
