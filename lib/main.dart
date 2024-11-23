@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true, // enabling Material 3 design
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors
-              .teal, // defining primary color, i used seed instead of Swatch due to its dynamic nature of the color scheme
+              .lightBlue, // defining primary color, i used seed instead of Swatch due to its dynamic nature of the color scheme
         ),
         textTheme: const TextTheme(
           bodyMedium: TextStyle(fontSize: 16, color: Colors.white),
