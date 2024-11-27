@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// creating the state for the contact page
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
 
@@ -7,23 +8,26 @@ class ContactPage extends StatefulWidget {
   State<ContactPage> createState() => _ContactPageState();
 }
 
+// here is the state class for the contact page extended
 class _ContactPageState extends State<ContactPage> {
-  final _formKey = GlobalKey<FormState>();
-  final _formData = {};
+  final _formKey = GlobalKey<
+      FormState>(); // allow the interaction of the form state, so we can call Validation and save on the form
+  final _formData =
+      {}; // this handles the data entered by the user ('name', 'email', 'message')
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('App Two'),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
           child: Column(
             children: [
-              const Text(
-                'Contact Us',
-                style: TextStyle(fontSize: 24),
-              ),
               TextFormField(
                 autofocus: true,
                 decoration: const InputDecoration(
@@ -78,6 +82,8 @@ class _ContactPageState extends State<ContactPage> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
+
+                    // the layout and snackBar provide on the bottom message to say form is submitted
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                           content: Text('Form submitted successfully!')),
